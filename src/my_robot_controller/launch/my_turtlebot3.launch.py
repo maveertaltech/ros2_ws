@@ -30,8 +30,16 @@ def generate_launch_description():
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    x_pose = LaunchConfiguration('x_pose', default='-2.0')
-    y_pose = LaunchConfiguration('y_pose', default='-0.5')
+    #_____________________NEID VAJA TIMMIDA SIIN JA SAMA KA NAVIGATION.PY FAILIS. KUI MUUDETUD SIIS UUESTI COCLON BUILD_________________________________________
+
+    x_pose = LaunchConfiguration('x_pose', default='1.35')
+    y_pose = LaunchConfiguration('y_pose', default='0.34')
+    #______________________________________________________________
+
+
+#________________SELLE MAP FILE LISASIN SIIA AGA ÄKKKI PEA VMS?______________________________________
+    map_file = os.path.join( get_package_share_directory('my_robot_controller'), 'maps', 'maps_new.yaml' )
+#___________________________________________________________________________________________________
 
     world = os.path.join(
         get_package_share_directory('my_robot_controller'),
