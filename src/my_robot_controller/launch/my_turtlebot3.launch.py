@@ -32,8 +32,11 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     #_____________________NEID VAJA TIMMIDA SIIN JA SAMA KA NAVIGATION.PY FAILIS. KUI MUUDETUD SIIS UUESTI COCLON BUILD_________________________________________
 
-    x_pose = LaunchConfiguration('x_pose', default='1.35')
-    y_pose = LaunchConfiguration('y_pose', default='0.34')
+    x_pose = LaunchConfiguration('x_pose', default='0.0')
+    y_pose = LaunchConfiguration('y_pose', default='0.0')
+
+    #x_pose = LaunchConfiguration('x_pose', default='1.35')
+    #y_pose = LaunchConfiguration('y_pose', default='0.34')
     #______________________________________________________________
 
 

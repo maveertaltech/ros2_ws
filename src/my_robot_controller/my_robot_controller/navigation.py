@@ -14,10 +14,10 @@ class TurtleNavigationNode(Node):
         self.get_logger().info("Navigation Node started")
 
         self.goal_poses = [  # Define goal positions and orientations
-            {'x': 4.47, 'y': 1.03, 'yaw': -30},
-            {'x': 6.11, 'y': 3.14, 'yaw': 60},
-            {'x': 7.75, 'y': 0.60, 'yaw': 0},
-            {'x': -0.19, 'y': 3.00, 'yaw': 90}
+            {'x': -1.88, 'y': 2.54, 'yaw': -30},
+            {'x': 2.62, 'y': 2.47, 'yaw': 60},
+            {'x': 5.5, 'y': 0.31, 'yaw': 0},
+            {'x': 0.0, 'y': 0.0, 'yaw': 90}
         ]
 
         self.current_goal_index = 0
@@ -43,8 +43,8 @@ class TurtleNavigationNode(Node):
         initial_pose.header.frame_id = 'map'
         #_______________________NEID VAJA TIMMIDA siin ja turtlebot3 launch failis et oleks samad_______________________________________
 
-        initial_pose.pose.pose.position.x = 1.35
-        initial_pose.pose.pose.position.y = 0.34
+        initial_pose.pose.pose.position.x = 2.0
+        initial_pose.pose.pose.position.y = 0.62
         #____________________________________________________________________--
 
         quaternion = tf_transformations.quaternion_from_euler(0, 0, 0)
@@ -79,7 +79,7 @@ class TurtleNavigationNode(Node):
         
         goal = self.goal_poses[self.current_goal_index]
         pose_msg = PoseStamped()
-        pose_msg.header.frame_id = 'map'
+        pose_msg.header.frame_id = 'odom'
         pose_msg.pose.position.x = goal['x']
         pose_msg.pose.position.y = goal['y']
 
