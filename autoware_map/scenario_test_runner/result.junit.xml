@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<testsuites name="/ros2_ws/autoware_map/scenario_test_runner" failures="0" errors="1" tests="2">
-  <testsuite name="sample" failures="0" errors="1" tests="2">
-    <testcase name="sample_1">
-      <error type="InternalError" message="attempting to request a message part outside the valid range" />
+<testsuites name="/autoware_map/scenario_test_runner" failures="1" errors="0" tests="1">
+  <testsuite name="t4v2" failures="1" errors="0" tests="1">
+    <testcase name="t4v2">
+      <failure type="SimulationFailure" message="CustomCommandAction typed &quot;exitFailure&quot; was triggered by the anonymous Condition (OpenSCENARIO.Storyboard.Story[0].Act[&quot;_EndCondition&quot;].ManeuverGroup[0].Maneuver[0].Event[1].StartTrigger.ConditionGroup[3].Condition[0]): Is any of [ego] colliding with another given entity Npc3?" />
     </testcase>
-    <testcase name="sample_0" />
   </testsuite>
 </testsuites>
